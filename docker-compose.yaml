@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres:16
+    container_name: lab8_csw
+    environment:
+      POSTGRES_PASSWORD: password123
+    ports:
+      - "5431:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
